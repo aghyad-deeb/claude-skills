@@ -42,7 +42,9 @@ Public IP       Private IP
 
 ### Step 2: Update SSH Config
 
-Add entries to `~/.ssh/config` for each node. First, remove any existing rental entries, then add new ones:
+Add entries to `~/.ssh/config` for each node. **If `rentalX` entries already exist, remove them first and replace with the new IPs.** Always override existing entries.
+
+To remove existing rental entries, delete all lines from `Host rentalX` through the next `Host` line (or end of file). Then add fresh entries:
 
 ```
 Host rental0
